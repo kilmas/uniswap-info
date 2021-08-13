@@ -41,7 +41,7 @@ export const stakingClient = new ApolloClient({
 export const blockClient = new ApolloClient({
   link: new HttpLink({
     // uri: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
-    uri: 'http://47.88.0.206:8000/subgraphs/name/blocklytics/bsc-blocks',
+    uri: 'http://47.88.0.206:8000/subgraphs/name/block/bsc-blocks',
   }),
   cache: new InMemoryCache(),
 })

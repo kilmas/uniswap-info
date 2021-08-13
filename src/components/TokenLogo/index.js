@@ -71,9 +71,13 @@ export default function TokenLogo({ address, header = false, size = '24px', ...r
     )
   }
 
-  const path = `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${isAddress(
+  // const path = `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${isAddress(
+  //   address
+  // )}/logo.png`
+
+  const path = `https://raw.githubusercontent.com/defiAnalysis/tokenList/master/icons/${isAddress(
     address
-  )}/logo.png`
+  )}.png`
 
   return (
     <Inline>
