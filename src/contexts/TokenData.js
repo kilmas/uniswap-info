@@ -242,6 +242,8 @@ const getTopTokens = async (ethPrice, ethPriceOld) => {
       return accum
     }, [])
 
+    console.log(ids)
+
     let current = await client.query({
       query: TOKENS_HISTORICAL_BULK(ids),
       fetchPolicy: 'cache-first',
