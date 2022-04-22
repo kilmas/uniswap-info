@@ -164,8 +164,8 @@ function SideNav({ history }) {
           </AutoColumn>
           <AutoColumn gap="0.5rem" style={{ marginLeft: '.75rem', marginBottom: '4rem' }}>
             <HeaderText>
-              <Link href="https://uniswap.org" target="_blank">
-                Uniswap.org
+              <Link href="https://www.oortswap.org" target="_blank">
+                OortSwap.org
               </Link>
             </HeaderText>
             {/* <HeaderText>
@@ -174,11 +174,11 @@ function SideNav({ history }) {
               </Link>
             </HeaderText> */}
             <HeaderText>
-              <Link href="https://uniswap.org/docs/v2" target="_blank">
+              <Link href="https://docs.oortswap.org/" target="_blank">
                 Docs
               </Link>
             </HeaderText>
-            <HeaderText>
+            {/* <HeaderText>
               <Link href="https://discord.com/invite/FCfyBSbCU5" target="_blank">
                 Discord
               </Link>
@@ -187,7 +187,7 @@ function SideNav({ history }) {
               <Link href="https://twitter.com/UniswapProtocol" target="_blank">
                 Twitter
               </Link>
-            </HeaderText>
+            </HeaderText> */}
             <Toggle isActive={isDark} toggle={toggleDarkMode} />
           </AutoColumn>
           {!below1180 && (

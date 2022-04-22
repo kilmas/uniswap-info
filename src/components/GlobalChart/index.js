@@ -29,8 +29,14 @@ const GlobalChart = ({ display }) => {
 
   // global historical data
   const [dailyData, weeklyData] = useGlobalChartData()
-  const { totalLiquidityUSD, oneDayVolumeUSD, volumeChangeUSD, liquidityChangeUSD, oneWeekVolume, weeklyVolumeChange } =
-    useGlobalData()
+  const {
+    totalLiquidityUSD,
+    oneDayVolumeUSD,
+    volumeChangeUSD = 0,
+    liquidityChangeUSD = 0,
+    oneWeekVolume,
+    weeklyVolumeChange = 0,
+  } = useGlobalData()
 
   // based on window, get starttim
   let utcStartTime = getTimeframe(timeWindow)
@@ -73,7 +79,7 @@ const GlobalChart = ({ display }) => {
   return chartDataFiltered ? (
     <>
       {below800 && (
-        <DropdownSelect options={CHART_VIEW} active={chartView} setActive={setChartView} color={'#ff007a'} />
+        <DropdownSelect options={CHART_VIEW} active={chartView} setActive={setChartView} color={'#050D3E'} />
       )}
 
       {chartDataFiltered && chartView === CHART_VIEW.LIQUIDITY && (

@@ -75,9 +75,7 @@ export default function TokenLogo({ address, header = false, size = '24px', ...r
   //   address
   // )}/logo.png`
 
-  const path = `https://raw.githubusercontent.com/defiAnalysis/tokenList/master/icons/${isAddress(
-    address
-  )}.png`
+  const path = `https://www.oortswap.org/images/tokens1/${isAddress(address)}.png`
 
   return (
     <Inline>

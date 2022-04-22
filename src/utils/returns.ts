@@ -31,6 +31,7 @@ interface Position {
 const PRICE_DISCOVERY_START_TIMESTAMP = 1589747086
 
 function formatPricesForEarlyTimestamps(position): Position {
+  console.log(position)
   if (position.timestamp < PRICE_DISCOVERY_START_TIMESTAMP) {
     if (priceOverrides.includes(position?.pair?.token0.id)) {
       position.token0PriceUSD = 1

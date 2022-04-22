@@ -184,8 +184,9 @@ export default function Provider({ children }) {
 
 async function getBulkPairData(pairList, ethPrice) {
   const [t1, t2, tWeek] = getTimestampsForChanges()
-  let [{ number: b1 }, { number: b2 }, { number: bWeek }] = await getBlocksFromTimestamps([t1, t2, tWeek])
-  // // var [b1, b2, bWeek] = [11414406, 11414406, 11414406];
+  let [{ number: b1 = '0' } = {}, { number: b2 = '0' } = {}, { number: bWeek = '0' } = {}] =
+    await getBlocksFromTimestamps([t1, t2, tWeek])
+  // var [b1, b2, bWeek] = [11414406, 11414406, 11414406]
   // let b1 = 11412630
   // let b2 = 11412630
   // let bWeek = 11412630
